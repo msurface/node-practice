@@ -1,15 +1,3 @@
-// INSTRUCTIONS:
-// ---------------------------------------------------------------------------------------------------------
-// Level 1:
-// Take any movie with a word title (ex: Cinderella) as a Node argument and retrieve the year it was created
-
-// Level 2 (More Challenging):
-// Take a move with multiple words (ex: Forrest Gump) as a Node argument and retrieve the year it was created.
-// ---------------------------------------------------------------------------------------------------------
-
-// Include the request npm package (Don't forget to run "npm install request" in this folder first!)
-// ...
-
 const request = require('request');
 // Grab or assemble the movie name and store it in a variable called "movieName"
 let nodeArgs = process.argv;
@@ -39,9 +27,3 @@ request(queryUrl, (error, response, body) => {
     console.log(`The movie was released on ${JSON.parse(body).Released}`);
   }
 });
-
-// If the request is successful
-// ...
-
-// Then log the Release Year for the movie
-// ...
